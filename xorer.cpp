@@ -13,7 +13,7 @@ void human_filesize(std::size_t bytes)
 {
     static char CH[] = "BKMGTP";
     int factor = (std::to_string(bytes).size()-1)/3 ;
-    printf("%.2f%cb", double(bytes)/(1LL<<(10*factor)),CH[factor]);
+    printf("%.2f%cB", double(bytes)/(1LL<<(10*factor)),CH[factor]);
 }
 
 char buffer[BLOCKSIZE];
